@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REI_DIS_PBG_NO_VU_300x600</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<link rel="stylesheet" href="REI_DIS_PBG_NO_VU_300x600_style.css" type="text/css" />
+	
+<script>
+window.onload = function(){	
+	
+	//Main content	
+	var tl = gsap.timeline({});
+	gsap.set("#container", {alpha:1});   
+	tl.to("#duck_content1", {x:516, duration:11.5, ease:"none"})
+	.to("#duck_content2", {x:423, duration:11.3, ease:"none"}, 4.45)
+	.to("#txt1", {alpha:0, duration:.5}, 6) 
+	.from("#cta", {alpha:0, duration:.5}, 6.35);
+	
+	//Ducks
+	
+	//Duck1
+var frames1 = document.querySelector("#frames_duck1");
+var spriteSheet1 = {
+  		width: 216,
+  		height: 177,
+  		total: 24,
+  		cols: 5,
+  		rows: 5,
+  		duration: 2
+};
+gsap.set(frames1, { force3D: true });
+
+var tl1 = gsap.timeline();
+tl1.repeat(5);
+for (var i = 0; i < spriteSheet1.total; i++) {  
+tl1.set(frames1, {
+    x: (i % spriteSheet1.cols) * -spriteSheet1.width,
+    y: Math.floor(i / spriteSheet1.cols) * -spriteSheet1.height
+  }, i / (spriteSheet1.total - 1) * spriteSheet1.duration);
+} 
+
+	//End Duck1
+	//Start Duck 2
+
+var frames2 = document.querySelector("#frames_duck2");
+var spriteSheet2 = {
+  		width: 123,
+  		height: 105,
+  		total: 24,
+  		cols: 5,
+  		rows: 5,
+  		duration: 2
+};
+gsap.set(frames2, { force3D: true });
+
+var tl2 = gsap.timeline();
+tl2.repeat(6);
+tl2.delay(3.35);
+for (var i = 0; i < spriteSheet2.total; i++) {  
+tl2.set(frames2, {
+    x: (i % spriteSheet2.cols) * -spriteSheet2.width,
+    y: Math.floor(i / spriteSheet2.cols) * -spriteSheet2.height
+  }, i / (spriteSheet2.total - 1) * spriteSheet2.duration);
+} 
+
+
+	//End Duck2 */
+
+} 
+</script>
+<meta name="ad.size" content="width=300,height=600">
+                <script type="text/javascript">
+                var clickTag = ""; </script>
+</head>
+<body>
+<div id="container">
+<div class="clickster">
+      <a href="javascript:window.open(window.clickTag)">
+			<img src="dclk.png" alt="clickthru" />
+      </a>
+</div>
+	<div id="main">
+		<img src="static_elements.png" alt="Palm Beach Gardens Now open!" />
+	</div>
+	
+	<div id="txt1">
+		<img src="text1.png" alt="Community Gear Expertise" />
+	</div>
+		
+	<div id="cta">
+		<img src="cta.png" alt="Visit Us" />
+	</div>
+	
+	<!-- Ducks -->
+	<div id="duck_content1">
+  		<div id="frames_duck1"><img src="sprite1.png" alt="duck 1 hiking"></div>
+	</div>
+	<div id="duck_content2">
+  		<div id="frames_duck2"><img src="sprite2.png" alt="duck 2 hiking"></div>
+	</div>
+	
+	
+	<!-- Grass -->
+	<div id="grass_front">
+  		<img src="grass_front.png" alt="grass">
+	</div>
+	<div id="grass_back">
+  		<img src="grass_back.png" alt="grass">
+	</div>
+
+
+	
+</div>
+</body>
+</html>
